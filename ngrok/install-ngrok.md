@@ -1,3 +1,5 @@
+ngrok是一个反向代理工具，1.x版本源码开源；可以自己搭建一个服务来使用，将本地的web或tcp服务通过公共端口和外部建立一个安全通道，这样就可以通过外网直接访问本地对应的服务，在进行微信公众号等测试开发的时候非常有用
+![](./images/ngrok.jpg)
 # 安装ngrok
 ## 环境
    `Linux Centos7` `git` `golang`  `openssl`
@@ -64,14 +66,14 @@ GOOS=windows GOARCH=amd64 make release-client
 # 如果是mac系统，GOOS=darwin。如果是32位，GOARCH=386
 ```
 > 注：  
-> Linux 平台 32 位系统：GOOS=linux GOARCH=386  
-> Linux 平台 64 位系统：GOOS=linux GOARCH=amd64  
-> Windows 平台 32 位系统：GOOS=windows GOARCH=386  
-> Windows 平台 64 位系统：GOOS=windows GOARCH=amd64  
-> MAC 平台 32 位系统：GOOS=darwin GOARCH=386  
-> MAC 平台 64 位系统：GOOS=darwin GOARCH=amd64  
-> ARM 平台：GOOS=linux GOARCH=arm  
-> 编译的是不带release的版本，还可以通过-tlsCrt和 -tlsKey选项来指定证书文件的位置  
+>- Linux 平台 32 位系统：GOOS=linux GOARCH=386  
+>- Linux 平台 64 位系统：GOOS=linux GOARCH=amd64  
+>- Windows 平台 32 位系统：GOOS=windows GOARCH=386  
+>- Windows 平台 64 位系统：GOOS=windows GOARCH=amd64  
+>- MAC 平台 32 位系统：GOOS=darwin GOARCH=386  
+>- MAC 平台 64 位系统：GOOS=darwin GOARCH=amd64  
+>- ARM 平台：GOOS=linux GOARCH=arm  
+>- 编译的是不带release的版本，还可以通过-tlsCrt和 -tlsKey选项来指定证书文件的位置  
 
 执行后会在`bin`目录及其子目录下看到服务端`ngrokd`和`windows`客户端`windows_amd64/ngrok.exe`
 
@@ -89,7 +91,7 @@ GOOS=windows GOARCH=amd64 make release-client
 >- 防火墙端口开放 `firewall-cmd firewall-cmd --permanent --zone=public --add-port=10001-10003/tcp`
 
 出现以下消息说明启动成功  
-<img src="images/ngrok-success.png">
+![](./images/ngrok-success.png)
 
 
 ## 附录1 参考文档
