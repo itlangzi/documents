@@ -131,6 +131,11 @@ vim /usr/bin/firewall-cmd
 #!/usr/bin/python -Es
 .....
 ```
+```bash
+vim /usr/sbin/firewall
+#!/usr/bin/python -Es
+.....
+```
 > 将第一行的内容改成 `#!/usr/bin/python2.7 -Es` 即可
 1. 启动防火墙
 ```bash
